@@ -1,7 +1,6 @@
 package com.example.bappy_cox.navigationdrawerfragment;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
@@ -25,6 +24,7 @@ public class MainActivity extends AppCompatActivity
 
         toolbar.setTitle("Home Fragment");
         toolbar.setSubtitle("This is Home Fragment");
+
         HomeFragment hm = new HomeFragment();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.myframe,hm, "frame1");
@@ -84,20 +84,17 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_camera) {
             toolbar.setTitle("Camera Fragment");
             toolbar.setSubtitle("This is Camera Fragment");
-            FirstFragment fm = new FirstFragment();
+            HomeFragment fm = new HomeFragment();
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.myframe,fm, "frame2");
             transaction.commit();
-
         } else if (id == R.id.nav_gallery) {
             toolbar.setTitle("Gallery Fragment");
             toolbar.setSubtitle("This is Gallery Fragment");
-            SecondFragment sm = new SecondFragment();
+            AllNews sm = new AllNews();
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.myframe,sm, "frame3");
             transaction.commit();
-
-
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
