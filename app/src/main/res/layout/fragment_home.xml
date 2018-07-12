@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:fitsSystemWindows="true"
     tools:context="com.example.bappy_cox.navigationdrawerfragment.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -11,8 +12,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:tabMode="scrollable"
+        android:background="#800080"
+        app:tabTextColor="#ffffff"
+        android:textDirection="firstStrong"
+        app:tabSelectedTextColor="#3abfb6"
+       app:tabIndicatorColor="#62c9d4"
+        app:tabTextAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
         android:id="@+id/tablayout"/>
     <android.support.v4.view.ViewPager
+        android:layout_marginTop="15dp"
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

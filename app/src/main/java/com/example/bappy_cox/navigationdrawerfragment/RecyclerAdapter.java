@@ -89,6 +89,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.holder
 
 
 
+
         public holder(View itemView) {
             super(itemView);
 

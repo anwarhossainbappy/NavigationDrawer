@@ -9,11 +9,16 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.squareup.picasso.Picasso;
+import com.squareup.picasso.RequestCreator;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -30,8 +35,13 @@ public class Bangladesh extends Fragment {
     private RecyclerView rv;
     List<News> employeelist, newlist;
     RecyclerAdapter empdapter;
-    String bangladeshdata;
+    String bangladeshdata,bangladeshlastupdate;
     ProgressDialog dialog;
+    private String  title;
+    private String image;
+
+    private ImageView imageview;
+    private TextView textview;
 
     public Bangladesh() {
         // Required empty public constructor
@@ -52,6 +62,7 @@ public class Bangladesh extends Fragment {
 
 
 
+
         LinearLayoutManager lm = new LinearLayoutManager(getActivity());
         rv.setLayoutManager(lm);
 
@@ -59,14 +70,16 @@ public class Bangladesh extends Fragment {
 
         employeelist =new ArrayList<>();
         newlist =new ArrayList<>();
-        //url=getString(R.string.baseurl)+"fetchteamprofile.php";
         bangladeshdata="http://192.168.43.2/bappy/bangladeshdata.php";
-        // sportsdataurl1="http://192.168.43.2/bappy/sportsdata.php";
+      bangladeshlastupdate= "http://localhost/bappy/bangladeshlastupdate.php";
 
 
         getbangladeshdata();
+
         return view;
     }
+
+
 
     private void getbangladeshdata() {
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(bangladeshdata, new Response.Listener<JSONArray>() {

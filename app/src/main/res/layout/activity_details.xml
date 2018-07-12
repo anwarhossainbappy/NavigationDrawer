@@ -12,11 +12,12 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
     <TextView
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:id="@+id/detailstitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Title"
+
         android:textSize="18sp"
         android:textAlignment="center"
         android:textAllCaps="true"
@@ -25,7 +26,7 @@
     <ImageView
         android:layout_gravity="center"
         android:id="@+id/imagedetail"
-        android:layout_margin="10dp"
+       android:layout_marginTop="5dp"
         android:layout_width="300dp"
         android:layout_height="200dp"
         android:src="@mipmap/ic_launcher"/>
@@ -33,31 +34,30 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:weightSum="3">
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
         <TextView
-            android:layout_weight="1"
             android:id="@+id/detailscategory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="category"
             android:textSize="15sp"
-            android:layout_marginLeft="50dp"
             android:textAllCaps="true"
             android:textColor="@color/colorPrimary"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+           android:layout_marginRight="10dp"/>
         <TextView
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="||"/>
         <TextView
-            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
             android:id="@+id/dateId"
+            android:layout_marginRight="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="date"
+            android:text="Date"
             android:textSize="15sp"
-            android:layout_marginLeft="50dp"
             android:textAllCaps="true"
             android:textColor="@color/colorPrimary"
             android:textStyle="bold"/>
@@ -65,14 +65,16 @@
 
     <TextView
         android:id="@+id/writerId"
-        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="writer"
+        android:text="Writer"
         android:textSize="15sp"
+        android:background="#57a2ac"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
         android:textAllCaps="true"
-        android:textColor="@color/colorPrimary"
+        android:textColor="#ffffff"
         android:textStyle="bold"/>
 
 
@@ -81,7 +83,7 @@
             android:id="@+id/detilsId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="category"
+            android:text="Details"
             android:textSize="15sp"
             android:layout_margin="10dp"
             android:textAllCaps="true"
